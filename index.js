@@ -8,10 +8,10 @@ util.inherits(Device,stream);
 var updateInterval = 10000; // interval in milliseconds to check the state of the pins
 
 function Driver(opts, app) {
-  var self = this;
-  app.on('client::up',function(){
-    self.emit('register', new Device(app));
-  });
+	var self = this;
+	app.on('client::up',function(){
+		self.emit('register', new Device(app));
+	});
 };
 
 function Device(app) {
